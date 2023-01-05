@@ -1,0 +1,30 @@
+/* (A) WHOLE PAGE */
+* {
+  font-family: arial, sans-serif;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  padding: 0; margin: 0;
+}
+
+/* (B) "ADMIN" QUEUE PAGE */
+#qNow, #qAll {
+  width: 50%;
+  text-align: center;
+  cursor: pointer;
+}
+#qNow { background: #d7e4ff; }
+#qAll { background: #ffd5d5; }
+#qNowNum, #qAllNum, #qNowTitle, #qAllTitle { padding: 20px 0; }
+#qNowNum, #qAllNum { font-size: 40px; }
+#qNowTitle, #qAllTitle { font-size: 24px; }
+
+/* (C) DISPLAY BOARD QUEUE NUMBER */
+#qNowDis {
+  display: flex;
+  width: 100vw; height: 100vh;
+  align-items: center; justify-content: center;
+  font-size: 60px;
+  font-weight: 700;
+}

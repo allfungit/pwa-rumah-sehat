@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- TITLE + CHARSET + DESCRIPTION + VIEWPORT + FAVICON -->
+    <title>JS Customer Queue</title>
+    <meta charset="utf-8">
+    <meta name="description" content="JS Customer Queue">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5">
+    <link rel="icon" href="favicon.png" type="image/png">
+
+    <!-- ANDROID + CHROME + APPLE + WINDOWS APP -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="theme-color" content="white">
+    <link rel="apple-touch-icon" href="icon-512.png">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="JS Queue">
+    <meta name="msapplication-TileImage" content="icon-512.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+
+    <!-- WEB APP MANIFEST -->
+    <!-- https://web.dev/add-manifest/ -->
+    <link rel="manifest" href="3-manifest.json">
+
+    <!-- SERVICE WORKER -->
+    <script>
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker.register("4-worker.js");
+    }
+    </script>
+
+    <!-- STYLESHEET + JAVASCRIPT -->
+    <link rel="stylesheet" href="2-js-queue.css">
+    <script src="2-js-queue.js"></script>
+  </head>
+  <body>
+    <!-- (A) CURRENT QUEUE NUMBER -->
+    <div id="qNow" onclick="queue.next()">
+      <div id="qNowNum">0</div>
+      <div id="qNowTitle">NOW</div>
+    </div>
+
+    <!-- (B) TOTAL IN QUEUE -->
+    <div id="qAll" onclick="queue.add()">
+      <div id="qAllNum">0</div>
+      <div id="qAllTitle">ALL</div>
+    </div>
+  </body>
+</html>
